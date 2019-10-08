@@ -1,4 +1,246 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Code Report]]></title><description><![CDATA[Insights for productivity and tech related info]]></description><link>https://code.report</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 30 Sep 2019 02:17:22 GMT</lastBuildDate><item><title><![CDATA[Hello World in Python]]></title><description><![CDATA[Hello, World! Python is a very simple scripting language. It encourages programers to write code without many boilerplates. One of the most…]]></description><link>https://code.report/hello-world-python/</link><guid isPermaLink="false">https://code.report/hello-world-python/</guid><pubDate>Sun, 29 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Hello, World!&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Code Report]]></title><description><![CDATA[Insights for productivity and tech related info]]></description><link>https://code.report</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Oct 2019 21:32:58 GMT</lastBuildDate><item><title><![CDATA[Pandas GroupBy Data Aggregation]]></title><description><![CDATA[Aggregation and Grouping with Pandas In this short Python/Pandas tutorial, we shall see some simple commands that can help dealing with data…]]></description><link>https://code.report/data-aggregation-using-pandas/groupby/</link><guid isPermaLink="false">https://code.report/data-aggregation-using-pandas/groupby/</guid><pubDate>Tue, 08 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Aggregation and Grouping with Pandas&lt;/h3&gt;
+&lt;p&gt;In this short Python/Pandas tutorial, we shall see some simple commands that can help dealing with data aggregation (such as sum, count, mean, min, max, etc.) and grouping. We will be using Pandas, an open source Python library that provides high-performance, easy-to-use data structures and data analysis tools.&lt;/p&gt;
+&lt;p&gt;These are commands commonly used in analytics and data science projects, but can also help when you only need a simple data extraction of a CSV file, excel file or some webserver log.&lt;/p&gt;
+&lt;p&gt;Before we start, you should have already installed the numpy and pandas dependency, depending on your python environment:&lt;/p&gt;
+&lt;h3&gt;NumPy&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;conda install numpy
+or
+pip install numpy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Pandas&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;conda install pandas
+or
+pip install pandas&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;First of all, we need to import numpy and pandas library. Then we will populate a panda DataFrame with some random data for this example.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; np
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; pandas &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; pd
+
+data &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Company&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;GOOGLE&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;GOOGLE&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;TESLA&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;TESLA&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;LEGO&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;LEGO&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;token string&quot;&gt;&apos;Person&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Stark&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Thor&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Hulk&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Leela&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Cacau&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Elon&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;token string&quot;&gt;&apos;Sales&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;120&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;520&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;320&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;114&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;563&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;248&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+df &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pd&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Try for yourself executing the dataframe, and you shall see how it looks:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Panda.DataFrame.groupby() function&lt;/h3&gt;
+&lt;p&gt; You can, then, specify which company you want to group with the groupby function and pass the result group to a variable&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;company &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;groupby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Company&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;With the variable pointing to the grouped column, we can get some data from it, for example the mean of the values:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;company&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c6cf442d898c08071e106e8805b30553/4871b/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 131px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 108.3969465648855%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAYAAADAQbwGAAAACXBIWXMAAAsSAAALEgHS3X78AAADX0lEQVQ4y5VV+08TQRDuX240+oMmGmNiND4SUEGKFvqwgIhIi0VLoVxBC+XuilTpg3KvtnfXXnvt5+zetVZEg5t82dud6ezsN99sA7jkGAwGfO46Djqdjr/3mwdfBy4ZDn3X5V/ZjVVcuXod9+/cwu2793Dtxk1Mv5zxD+h7AdnplwEbymkF6c0MUokP2BFySG18Rk4Q4PopBwZjeff7/b9iPOhfOAGzBvAfYxjUpeszsIOGs3fWwAsYDc0iHI0jHp1HMDSPUHAGsaV3CE1PYDaygHDoNYqlk9Et/kULD5jLbmF9/SPehOewmkrj1cQjPJgMIjLzDO/X03h0/y6Eg6NL3SKg6zps2+bo9nrodR36tmCaJtw+XY/WjYYBjfx0H5qmjTBcNxoNL8P9/X0wHB4eolAooEDzIc2iKNJeAXmySbLM9/L5PPdlNlGSIEki/x2DLEucz4Dr9qGrpySFTQg7OxCy28jt7UEgKSSTGzir15D+lMLR9wq/UsduYTtLflub2BJ2USqV8GVvF1an5xWl3W7je7GA2bkIwuF5xCNzWEkm6TuCyYkprK9RcUIh7IvfeIc0dQXRWAyhl1OIvV0h7pN4v7yEum56ARlXlmVB93loNJrQVBXNpjfXajWUy2UoqkZ+NlqtFlRV4fsq2Q2D+NV0tNu2xyG7d29MU/8Sb4+K5voteH64bu+XbMabv22ZaFHGB/mvOD4uoVgs4qgoQ9GMUV9XKxUcySIVUIKiKOQjo+/bAkNBsgzZqP/4hs9ZAZG510h+TGHq+TTWVhaxmxe53TFVPJ18hkjwBYLhBWSomMtLcTQ73u//aD2mO8ZZlThi/DBeDUNHx+mOXhSmWWZjfDKwOgyzDzj0vo3j/Bi2mkv8sSp3u92L30na5xyy6CO0mpBIzF9JvIw7SS5SJxhQlTPolJFN3LaaDeL2GJVKmcQso0x8npz8gGX7VWaSYTBNC07bxKfEOzyefI7FpWU8ePgEmUwGUerx9LZA2Q6gK1UsLL5FIrGGxIdVZKkZ4rF51A37lw6HsAiGrnqtJUq8pXZzO7zNTipV4q4NTTnF3pc86mdnqNfrqFUrPFPT8jNkvIzDIfL5e0eceY+rp4Cez6FDXLE142wI5s/4/02HFz2kF/0FjBfiIttPLsVxxB5l294AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;unsplash.com&quot;
+        title=&quot;&quot;
+        src=&quot;/static/c6cf442d898c08071e106e8805b30553/4871b/1.png&quot;
+        srcset=&quot;/static/c6cf442d898c08071e106e8805b30553/4871b/1.png 131w&quot;
+        sizes=&quot;(max-width: 131px) 100vw, 131px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;The result of the mean was applied only to the Sales, because Person is not numeric, and the mean function ignores every column that is non numeric
+You can also get the grouped values and get the standart deviation from it with std()&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;company&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/674ce4771b59a1e48ca3cc920ad71385/adf9e/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 174px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 76.4367816091954%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAACc0lEQVQ4y5VUaW/aQBDl/3/thyqt2hyVqgQSqiQQckC4clVUURWFI+E+jM1lgy8wYF5nFpmWpKrSlUa77Mw+vTfzjA//WIvFQuxDdYBSqQxZUdCWJBimtcp7Nd7y/Zl4Ga7riqJGtYwPGxvY3N7Bx/fvEE1ci3vOvwJ8efHW5b37K0OFpPQHA+j6CCNdh2WZGI2GMC0b0+lsjbEXL5V4wALw7vYW/kAQgf0Atra28GVnW5w3P3+CZtj/xdqnaRpqtRoqlQoazSYK+TzyhQLq9ToeHh7QarXQbrchy7IIPnvBv1kd15imuWRoGAa63S6UTgcKF9Depej1euj3+2LnvETTZRBFVtChPIM1iUCLgs+2PV4Cuu4C5WIBR+EwoqdhHEeiOAsf4uLsHKHIKdSRiV5HRvAggOPjEG6vrhA4COIkEkE6ncbddQqZ+5+Yu0IzfI7jQFNVNBoNyMRAasuQSEK1UkW1VodumMs8tYBrJJaqdIhdAyrdq4O+eDObzT2Gr7201mjOv2kg7rqxedm6hu+ZH7i5SiJyFkMyEcdQt6CPNFzGokilUig8FRFPJKgFQYRCRzg68CN5k1mBrgG68xlNtyakNVsSNVvBjJozti1yQVm4gX2qacPllHnaUos8rP62zXQ6xXg8FsETd5wp9WO2kuI4E0wmzko+57hN8/l8xYrfem98k8mEvhAdPJxcLovd3a84PQkhdplEIplGp0dfkNpFKh7DYSiCWDSG3b09nF9E8Y3k+v37yGTuecBLhgzIprRtG2zy4vMTatUKHh+z1K9nDFQNY8sgaz2L/lXoXyeby6FYKiFPBLK5PPm0t2L8C+LIYUl3sBHMAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;unsplash.com&quot;
+        title=&quot;&quot;
+        src=&quot;/static/674ce4771b59a1e48ca3cc920ad71385/adf9e/2.png&quot;
+        srcset=&quot;/static/674ce4771b59a1e48ca3cc920ad71385/adf9e/2.png 174w&quot;
+        sizes=&quot;(max-width: 174px) 100vw, 174px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;The grouped data is a dataframe, so you can get the sum and specify only one company with sum() and loc[]&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;company&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;loc&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;LEGO&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Sales    811&lt;/li&gt;
+&lt;li&gt;Name: LEGO, dtype: int64&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Same thing with only one line of command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;groupby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Company&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;loc&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;TESLA&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Sales    434&lt;/li&gt;
+&lt;li&gt;Name: TESLA, dtype: int64&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Other usefull agregate functions:&lt;/h1&gt;
+&lt;h3&gt;Count&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;groupby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Company&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/78f1d272fbe3a12277b02fd3ba3ac60f/a3e11/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 193px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.61139896373058%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAACIUlEQVQ4y5VTaW/TQBD1//8JfECqEIIAgqYVKkWIEuFc5GjSoJTWTuLcic/Y8R07j91NHdlpIsFIo129mZ3zLYcTst1u2RmFAURRgKJq0A0Dhq7DtGxijzEZj6EoKmR5CcdxmT+XPI7j+EAj5uDZK1xffUYul8On8zze5d6gUKoz23tyP3v1GmcvX6DAV3YBk0pOVop/FxqLVSj1RYiCgF6vh8FAgiCIRAVourFrO4qedXCsq31A8aGL79++4vrLFWvtbe4Dzs8/otJo43+FsywLs9kchrGCuVpBVVUydBO6rhF8huFwiNFolNIxptNpBhuT5UwmE9i2DW6z2WAoDVD4cQO+VEG1zOOmwONXtYpWu431eg1NIxsm2zVIQnm5QKfzmxWwx+QF7u46CMIQXBxvsVzMUSkXUW+20GrWwBcrKJdKeHh8RBCELLPjOPA8j9BGQ/f+D7n7Wax7DxqLowOnekrCIEBIMie6efI9htHFcGkSuyRbu90i1ZZJ66RCoZ8hOZXA9xgL0qRKY5mAQeBDIG32CX16ooilrO4DJj5h4GE+X2QSpTG2FDqHRNnjp/wxacVz3Yzd9wPs3rjPMKocnYFFNkkNt7d15C8ukc9fosj/RKPZhE9mSDdt22u4JLimyqjVG3DIneJ7rFZHRGdIo9JtUYNpmox3kiQxVRSF4dSe+FjmivGWzjuNTQlnoyje/eX01zmUY9/rEE8wev4FwolzyKD5yRIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;unsplash.com&quot;
+        title=&quot;&quot;
+        src=&quot;/static/78f1d272fbe3a12277b02fd3ba3ac60f/a3e11/3.png&quot;
+        srcset=&quot;/static/78f1d272fbe3a12277b02fd3ba3ac60f/a3e11/3.png 193w&quot;
+        sizes=&quot;(max-width: 193px) 100vw, 193px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;Max value&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;groupby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Company&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9a746fd7a502aa126403c6c466d59008/a3b1f/4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 197px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 69.54314720812184%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAACR0lEQVQ4y61TyXIaQQz1//9HKvYBCLGJcQyDCRhvBOKwOWxhdhabYYZhGbYXSdTg+OCqHNJVKrXUavXTk/oI76zdbifa9xyUSmUYpgW734dlWfDnC8z8KRqNJ/RUFWqvh8UykPij8PJ2u30jm81GArzxCEr6EvF4HGeJBCKRCJpdA747wcnxMSLRKE4+fkDPsPcJQyT/Y3EuQfirXkW59B3FYlHKu7u7x/3DAwajlzfl/8sShE/1GnLZDLJXGcSiMZyefsH5eQLlSoPK32A2m2GxWGA+n8ueNduhL7QF4XQ6hWXbcBwHzniMMYnnumL3+zY0TYOu69BIDMPAYDCASXrv12CapohtW8K7lGyZOpTUJXLXNyjkrpBScrgtXKPZaktQsFphaJnI5wu4Ib9qWFiv15gTWrYVRcFvVd+XzBdGoyHqVHar3Uan3UKt1kC1UqGXLSnH9324k4kgqfx8RH/4fPB3Ox26W8dw9LxPyCPyHunh+DCPm7/jSLM/FIkl36HLYaDruch9yyKjpPH1Iolmp3dIbpsGkskk8oU8VM08JFbSKWriZ+hm/7XLIUrWk4kDbhQLc7c/A1ZBIA2bUakB7cMPECyX1Pm5cCoJecNcMCeapgqPum7IZceZkH9B51OyHXrMJb5H8DxPEvMI2TQhKn2/MU2FJFwRCkbDCRuNKpV1gbOzBJWSRrVWwzJYyX++LRQQjX1ClOb0x2NFUPJD+VxWvmWz1X3tMg/lkqBzcrYZNV9gCc+CYCk2x7AdCtscz5pp+wOeJxzzi4Q5/gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;unsplash.com&quot;
+        title=&quot;&quot;
+        src=&quot;/static/9a746fd7a502aa126403c6c466d59008/a3b1f/4.png&quot;
+        srcset=&quot;/static/9a746fd7a502aa126403c6c466d59008/a3b1f/4.png 197w&quot;
+        sizes=&quot;(max-width: 197px) 100vw, 197px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;Describe&lt;/h3&gt;
+&lt;p&gt;We can also call a describe function that gives us mean, standard deviation, min, max and some other info&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;groupby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Company&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6a469ad58517651e58133cce9eb5c3fb/60eaf/5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 517px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 33.07543520309478%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAABK0lEQVQoz2VR2W7CMBD0//8bfUVQQk6HXI4NhQQSw3Rn1UqotRTtMePZWcfE5xM8zemELMvx97xer3/5e3zHecxv0rUN0jRD13UoyxJN0+ByuSg2TRPqusb1+oWiKLEsqwzPtE9uXFfkeY75fofZbrcqNE2zfvM8K/Eu4CpEOliWRfusH48HYoyKx7gqxvp2u2k0m80HKOqcUxdVVek0xt1uhyRJcBK3dFTXFofDQV2xJif5qY/HVLczXdvqepw8eo+h72FF2LlBhQv5vA962QvO3jiOqESE/bIo4KSmaDifYZjwXbhSL2KcQqfDMMhTpNjvP1WcgtyCPfKstcqhw15iIcIcZCjQiEu+GxshBL0YgteplVz8kp9DEWK1unfK9VJbW2neisZZHH4DaIsRO+tIzf4AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;unsplash.com&quot;
+        title=&quot;&quot;
+        src=&quot;/static/6a469ad58517651e58133cce9eb5c3fb/60eaf/5.png&quot;
+        srcset=&quot;/static/6a469ad58517651e58133cce9eb5c3fb/9ec3c/5.png 200w,
+/static/6a469ad58517651e58133cce9eb5c3fb/c7805/5.png 400w,
+/static/6a469ad58517651e58133cce9eb5c3fb/60eaf/5.png 517w&quot;
+        sizes=&quot;(max-width: 517px) 100vw, 517px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;Transpose&lt;/h3&gt;
+&lt;p&gt;With the transpose function, you can transpose the rows, in this case companies, to to columns.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;groupby&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Company&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;describe&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;transpose&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/45cdfb32611629b84ff91c716bc1986c/a6ccf/6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 397px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 62.21662468513854%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsSAAALEgHS3X78AAACDklEQVQoz1VSCW7iQBDk/89CSYTEKiSwAXyAbxubG3NftVWNQrKWRnaPZ6rr6Mb1esXpdILenuug3W5z/cFiuURVFnh5fUOr1UKcJNCz2+3w9voCx3FxZ71aLtBsNuG6HjFuaOz3e0ynU8znc3vHcYxut4s0y1CWJXq9Ht477wiC0M44zhCdTscAVI9GI3x+fuDv1xfO5zMal8vFugpYLLd1jTAMsdlssFqtEAYBXM/DbDa3Pf3zWOdFgd12izRNrY7jBLcbGQq1JohATRIPBQTRXpblSChVLGRBUeSIqCAIxpjOZmy4xGRSsklgim73+w/glkBax+ORQJmt8XgMn91Hvo9KdkQRL0cYDgYGXFUlhsOhLZGQQgM8HA44ckm+aFdVZXILylJ3AS8WC6sl0WeDgsw265V57o982zeGYvRBk5WiwNQlSzOs12sLJYroGQFmDECAEVkKsKqm9HRt3qlhkqQPDzUySleM5GNN4yWzJEvJkOH9fv8JpssOJSZklOcZU3coeUCfxz+SBSTZd1LWpoKo6y0Nn9i3QJZsKMaxhRIYCTEseEaToADvv0MRqNgKOCDAnJ7JF32LhXxVUAHHRrXGRqE8xshFSPbPsVG637OolWWpMTCJHBmlKLZPyQTM8pwNE7PEdd3/Uxbgt2Q9krligrokEM/3HimzVgjyWGO0YFBRFNucylPd/wfLpHxvBX5dTAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;unsplash.com&quot;
+        title=&quot;&quot;
+        src=&quot;/static/45cdfb32611629b84ff91c716bc1986c/a6ccf/6.png&quot;
+        srcset=&quot;/static/45cdfb32611629b84ff91c716bc1986c/9ec3c/6.png 200w,
+/static/45cdfb32611629b84ff91c716bc1986c/a6ccf/6.png 397w&quot;
+        sizes=&quot;(max-width: 397px) 100vw, 397px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World in Python]]></title><description><![CDATA[Hello, World! Python is a very simple scripting language. It encourages programers to write code without many boilerplates. One of the most…]]></description><link>https://code.report/hello-world-python/</link><guid isPermaLink="false">https://code.report/hello-world-python/</guid><pubDate>Sun, 29 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Hello, World!&lt;/h3&gt;
 &lt;p&gt;Python is a very simple scripting language. It encourages programers to write code without many boilerplates. One of the most simple directive in Python is the “print” directive , which simply prints out a line. We are using here the Python 3 syntax because it more semantically correct and supports newer features, and Python 2 will not be maintained anymore beyond 2020.&lt;/p&gt;
 &lt;p&gt;First of all, create a file with a python extension, for example hello.py
 Write on the file the print call with “Hello World” text:&lt;/p&gt;
@@ -25,13 +267,7 @@ Write on the file the print call with “Hello World” text:&lt;/p&gt;
 &lt;p&gt;Or you can convert all the images on the folder onto a single pdf file&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg all&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;images&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pdf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Remember that some linux distributions might not have the convert by default, you can install it with&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;sudo apt&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt; install imagemagick&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Power off computer with Powershell]]></title><description><![CDATA[How to power off a computer (or a list of) with one powershell command Let’s say you need to execute a long script but needs to power off…]]></description><link>https://code.report/windows-powershell-power-off-computer/</link><guid isPermaLink="false">https://code.report/windows-powershell-power-off-computer/</guid><pubDate>Sat, 28 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;How to power off a computer (or a list of) with one powershell command&lt;/h3&gt;
-&lt;p&gt;Let’s say you need to execute a long script but needs to power off the computer after the execution. You can end the script with:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Stop&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Computer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;If you want to try the command but without it actually executing, try with the -WhatIf parameter! It will show what would be executed without actually doing it!&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Stop&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Computer &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;WhatIf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;The command let’s you power off multiple systems as well, just name them on the command. If you are going to try this at your works network, please use it with the -WhatIf parameter!&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Stop&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;computer &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;ComputerName ‘computer01′&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;’computer02′&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;’computer03’&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Windows Powershell]]></title><description><![CDATA[PowerShell is a task automation and configuration management framework from Microsoft It consisting of a command-line shell and associated…]]></description><link>https://code.report/windows-powershell-power/</link><guid isPermaLink="false">https://code.report/windows-powershell-power/</guid><pubDate>Sat, 28 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;PowerShell is a task automation and configuration management framework from Microsoft&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;sudo apt&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt; install imagemagick&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Windows Powershell]]></title><description><![CDATA[PowerShell is a task automation and configuration management framework from Microsoft It consisting of a command-line shell and associated…]]></description><link>https://code.report/windows-powershell-power/</link><guid isPermaLink="false">https://code.report/windows-powershell-power/</guid><pubDate>Sat, 28 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;PowerShell is a task automation and configuration management framework from Microsoft&lt;/h3&gt;
 &lt;p&gt;It consisting of a command-line shell and associated scripting language. Initially a Windows component only, known as Windows PowerShell, it was made open-source and cross-platform on August 2016 with the introduction of PowerShell Core. This shell is based on the .NET framework, and it includes a command-line shell and a scripting language.&lt;/p&gt;
 &lt;p&gt;Powershell contains hundreds of commands, which are called Cmdlets. We can easely list them all with&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Get&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Command &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Type Cmdlet&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -45,7 +281,13 @@ gastby build&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;New&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Item &lt;span class=&quot;token constant&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;\git\github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;io\&lt;span class=&quot;token constant&quot;&gt;CNAME&lt;/span&gt;
 Set&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Content &lt;span class=&quot;token constant&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;\git\github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;io\&lt;span class=&quot;token constant&quot;&gt;CNAME&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;code.report&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The last thing I had to do is to copy all the contents of the gatsby build located on C:\git\cdrp\public* onto C:\git\github.io, the -Recurse parameter states that the copy must include all files and subfolders&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Copy&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Item &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Path &lt;span class=&quot;token constant&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;\git\cdrp\&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt;\&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Destination &lt;span class=&quot;token constant&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;\git\github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;io\ &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Recurse&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using SED - A Stream EDitor for unix systems]]></title><description><![CDATA[In this article, I will show a fast and simple way to improve your productivity using a tool that helps with text processing, which can be…]]></description><link>https://code.report/using-sed-linux/</link><guid isPermaLink="false">https://code.report/using-sed-linux/</guid><pubDate>Fri, 27 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In this article, I will show a fast and simple way to improve your productivity using a tool that helps with text processing, which can be very useful when you need to manipulate part of the document, to find something or when substitution of words or patterns is needed.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Copy&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Item &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Path &lt;span class=&quot;token constant&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;\git\cdrp\&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt;\&lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Destination &lt;span class=&quot;token constant&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;\git\github&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;io\ &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Recurse&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Power off computer with Powershell]]></title><description><![CDATA[How to power off a computer (or a list of) with one powershell command Let’s say you need to execute a long script but needs to power off…]]></description><link>https://code.report/windows-powershell-power-off-computer/</link><guid isPermaLink="false">https://code.report/windows-powershell-power-off-computer/</guid><pubDate>Sat, 28 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;How to power off a computer (or a list of) with one powershell command&lt;/h3&gt;
+&lt;p&gt;Let’s say you need to execute a long script but needs to power off the computer after the execution. You can end the script with:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Stop&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Computer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you want to try the command but without it actually executing, try with the -WhatIf parameter! It will show what would be executed without actually doing it!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Stop&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Computer &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;WhatIf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The command let’s you power off multiple systems as well, just name them on the command. If you are going to try this at your works network, please use it with the -WhatIf parameter!&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Stop&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;computer &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;ComputerName ‘computer01′&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;’computer02′&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;’computer03’&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using SED - A Stream EDitor for unix systems]]></title><description><![CDATA[In this article, I will show a fast and simple way to improve your productivity using a tool that helps with text processing, which can be…]]></description><link>https://code.report/using-sed-linux/</link><guid isPermaLink="false">https://code.report/using-sed-linux/</guid><pubDate>Fri, 27 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In this article, I will show a fast and simple way to improve your productivity using a tool that helps with text processing, which can be very useful when you need to manipulate part of the document, to find something or when substitution of words or patterns is needed.&lt;/p&gt;
 &lt;p&gt;sed &lt;code class=&quot;language-text&quot;&gt;(stream editor)&lt;/code&gt; is a Unix utility that parses and transforms text, using a simple, compact programming language and is available today for most operating systems. sed was one of the earliest tools to support regular expressions, and remains in use for text processing, most notably with the substitution command. Popular alternative tools for plaintext string manipulation and “stream editing” include AWK and Perl.&lt;/p&gt;
 &lt;h3&gt;Using sed for substitution or replacing words.&lt;/h3&gt;
 &lt;p&gt;You can replace some words on a text file, or on a stream by simple using the code bellow on a terminal window:&lt;/p&gt;
