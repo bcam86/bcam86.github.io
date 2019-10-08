@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Code Report]]></title><description><![CDATA[Insights for productivity and tech related info]]></description><link>https://code.report</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Oct 2019 21:32:58 GMT</lastBuildDate><item><title><![CDATA[Pandas GroupBy Data Aggregation]]></title><description><![CDATA[Aggregation and Grouping with Pandas In this short Python/Pandas tutorial, we shall see some simple commands that can help dealing with data…]]></description><link>https://code.report/data-aggregation-using-pandas/groupby/</link><guid isPermaLink="false">https://code.report/data-aggregation-using-pandas/groupby/</guid><pubDate>Tue, 08 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Aggregation and Grouping with Pandas&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Code Report]]></title><description><![CDATA[Insights for productivity and tech related info]]></description><link>https://code.report</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Oct 2019 23:10:28 GMT</lastBuildDate><item><title><![CDATA[Pandas GroupBy Data Aggregation]]></title><description><![CDATA[Aggregation and Grouping with Pandas In this short Python/Pandas tutorial, we shall see some simple commands that can help dealing with data…]]></description><link>https://code.report/data-aggregation-using-pandas/</link><guid isPermaLink="false">https://code.report/data-aggregation-using-pandas/</guid><pubDate>Tue, 08 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Aggregation and Grouping with Pandas&lt;/h3&gt;
 &lt;p&gt;In this short Python/Pandas tutorial, we shall see some simple commands that can help dealing with data aggregation (such as sum, count, mean, min, max, etc.) and grouping. We will be using Pandas, an open source Python library that provides high-performance, easy-to-use data structures and data analysis tools.&lt;/p&gt;
 &lt;p&gt;These are commands commonly used in analytics and data science projects, but can also help when you only need a simple data extraction of a CSV file, excel file or some webserver log.&lt;/p&gt;
 &lt;p&gt;Before we start, you should have already installed the numpy and pandas dependency, depending on your python environment:&lt;/p&gt;
@@ -46,7 +46,7 @@ df &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pd&lt;span class=
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
-        alt=&quot;unsplash.com&quot;
+        alt=&quot;code.report&quot;
         title=&quot;&quot;
         src=&quot;/static/c6cf442d898c08071e106e8805b30553/4871b/1.png&quot;
         srcset=&quot;/static/c6cf442d898c08071e106e8805b30553/4871b/1.png 131w&quot;
@@ -80,7 +80,7 @@ You can also get the grouped values and get the standart deviation from it with 
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
-        alt=&quot;unsplash.com&quot;
+        alt=&quot;code.report&quot;
         title=&quot;&quot;
         src=&quot;/static/674ce4771b59a1e48ca3cc920ad71385/adf9e/2.png&quot;
         srcset=&quot;/static/674ce4771b59a1e48ca3cc920ad71385/adf9e/2.png 174w&quot;
@@ -126,7 +126,7 @@ You can also get the grouped values and get the standart deviation from it with 
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
-        alt=&quot;unsplash.com&quot;
+        alt=&quot;code.report&quot;
         title=&quot;&quot;
         src=&quot;/static/78f1d272fbe3a12277b02fd3ba3ac60f/a3e11/3.png&quot;
         srcset=&quot;/static/78f1d272fbe3a12277b02fd3ba3ac60f/a3e11/3.png 193w&quot;
@@ -159,7 +159,7 @@ You can also get the grouped values and get the standart deviation from it with 
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
-        alt=&quot;unsplash.com&quot;
+        alt=&quot;code.report&quot;
         title=&quot;&quot;
         src=&quot;/static/9a746fd7a502aa126403c6c466d59008/a3b1f/4.png&quot;
         srcset=&quot;/static/9a746fd7a502aa126403c6c466d59008/a3b1f/4.png 197w&quot;
@@ -193,7 +193,7 @@ You can also get the grouped values and get the standart deviation from it with 
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
-        alt=&quot;unsplash.com&quot;
+        alt=&quot;code.report&quot;
         title=&quot;&quot;
         src=&quot;/static/6a469ad58517651e58133cce9eb5c3fb/60eaf/5.png&quot;
         srcset=&quot;/static/6a469ad58517651e58133cce9eb5c3fb/9ec3c/5.png 200w,
@@ -229,12 +229,231 @@ You can also get the grouped values and get the standart deviation from it with 
       &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
-        alt=&quot;unsplash.com&quot;
+        alt=&quot;code.report&quot;
         title=&quot;&quot;
         src=&quot;/static/45cdfb32611629b84ff91c716bc1986c/a6ccf/6.png&quot;
         srcset=&quot;/static/45cdfb32611629b84ff91c716bc1986c/9ec3c/6.png 200w,
 /static/45cdfb32611629b84ff91c716bc1986c/a6ccf/6.png 397w&quot;
         sizes=&quot;(max-width: 397px) 100vw, 397px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Dealing with missing values]]></title><description><![CDATA[Preparing data for an analysis is, sometimes, the worst part of the battle. It can be a very tedious task and it can take up to 80% of the…]]></description><link>https://code.report/data-science-dealing-with-missing-values/</link><guid isPermaLink="false">https://code.report/data-science-dealing-with-missing-values/</guid><pubDate>Mon, 07 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Preparing data for an analysis is, sometimes, the worst part of the battle. It can be a very tedious task and it can take up to 80% of the whole analysis time, according to &lt;a href=&quot;https://www.ibm.com/blogs/bluemix/2017/08/ibm-data-catalog-data-scientists-productivity/&quot;&gt;IBM Data Analytics&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Data cleaning is just a part of the process on every data science project, and often we have to deal with missing data while preparing it.
+In this article we will go over simple ways to detect, summarize, and replace missing values using Python with NumPy and Pandas libraries.&lt;/p&gt;
+&lt;p&gt;Before we start, you should have already installed the numpy and pandas dependency, depending on your python environment:&lt;/p&gt;
+&lt;h3&gt;NumPy&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;conda install numpy
+or
+pip install numpy&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Pandas&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;conda install pandas
+or
+pip install pandas&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Importing the dependencies&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; np
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; pandas &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; pd&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Let’s generate a dictionary with missing values. We can specify a reference for a missing value using numpy &lt;code class=&quot;language-text&quot;&gt;np.nan&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;d &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nan&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;B&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nan&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nan&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;C&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now let’s create a Pandas DataFrame with the dictionary and visualize it:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; pd&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;d&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+df&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/235e418c396fad7b82910b1b5360f187/e77ae/1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 134px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 92.53731343283582%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAA7DAAAOwwHHb6hkAAACzklEQVQ4y5VU+08aQRDm/0/amCZWa2L9pbGaPtKXGFuNtTVRBCnX43mAFI6XenjAvYC74+vMHgdepU264bIz387Oznz7LTH8MabT6Xz+X5tHDEtGsDiNbLi/6V/20oTLDgg3jUYjeJ4nbHcygeOMohWGweHn+0FwSUpg+/VHYfuUwPOCDVsb6/iWyAj75PgIrVs9cuhfK2zWyji/lB7g30+OUao2hK0U8+hqQUI/rNCyLAyHQxiGCdMMPvYdas11J4QbM9zAgHDXdaltR8Rz+yatT6j1sMpYuVxBsVhEPp+DLGfpk2d+XsyMZQnL5fJQFAWFQkGscVw+X0A2K0PTtEXCkWUglUxA0w14VBHzVfgp46p+hYtkWlyA63ro6xqSqTRkKYNq7VdAS52KKdeiHA7vNBwcxNFo3cKxTdiOA4VOTWVS2Isf0i06sCwbt10Vn+Kf8WU/Dimbg+tP0W3VkJFLnI1/QUJOYNs2LNuac2ixT9w6ji38kEfmjtc4XsRRjGWZUQ7dmaY8ItudffdHGBzRpe9HcM/zFwn5RVRKCsb+Qu1qowa12aJLqAq/226jQDFq7QpSRkJvMBT4daeNutp6+PTkdBrmvDIfpydHODtPYG//UCCVsoLd3R1sPV3Fi+0dyEpF4OnkGS7ScrCLql4qbG6H2/b96Dtm1kM6Qpz9MGReIXPBKud5POOFTwuTh29XPMvZJk+IeyTifCGrxUExvqVqpYyePsBwcIdSqYRmsy3mWr2OEamgpaooV6s0N1AggV+TkDlhp91CvaEuChCyMXS8ffMKzWsdpt7BzssXWF3fwsrKE7x7/0HcoPQjjc3nm1h7/AhrzzaQkALeMpcXOPp6GhW2RW/05uZmrsFBv49Opyuek67rMBgnHfZ6GlXUhk7rjNuk2z7NbEdaZu4YGFML3Ab73owXthkbj8dkuwJnLMQF77QW/j9ywt/FladCrz7PHgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;code.report&quot;
+        title=&quot;&quot;
+        src=&quot;/static/235e418c396fad7b82910b1b5360f187/e77ae/1.png&quot;
+        srcset=&quot;/static/235e418c396fad7b82910b1b5360f187/e77ae/1.png 134w&quot;
+        sizes=&quot;(max-width: 134px) 100vw, 134px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;Sometimes we just need to remove the rows that contains occurrence of empty data. The &lt;code class=&quot;language-text&quot;&gt;dropna&lt;/code&gt; function in a Pandas DataFrame will remove every row that contains a missing value. On the example below, only the first row did not have any missing value.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2ebd9027d574408ad9eaaed0c02cd052/4d1cd/2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 122px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 55.73770491803278%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABlElEQVQoz21Sy07CQBTlk9248TNcmLjWxC9QQ4gguhEQFpq+sLVQxfLokz7p6zgz2AqFSSZzz7k35957Mg0cnAJFUWyj4j/excfy5ds4kKsVoI5rdfW4gSOnLEiTZA/nWYYoipDnWxyFIZIkPZxwd5WiyLGtT3F5cY4Rr1aNVFnA2ekJ1GVAUIir6xvoK3tv/UZ9lepkCQaDAWbzVUWFgYdB/wV+lDEsSRKCaHM4YUhGNwwDpmnCsqy/12brees1wzRvOw7hYjiODZPUBUEA27YQx3ElygQXiwV4nsd4PAbHcRBFkXUXBYHFlPuQ5S1HsCDwVR1PXjpEJViOOlUVKOqExSZpoH1pkBUF37M547j3N2jaFGNJhO0GjNOmE+iL5XEPnx5aaD92kZN4QiYZjnq4bbbQ649Y/rndQrfTwX3zDtLnD1HIMBy+guOFfUEKEvI9LNOAYVrE+AC+5zOfdF2H466ZxybxkFozJ9fzfeaf53lwXRdpmu57SInNZsOEqcH0UlzyEcUkR/PpTk15syyrBH8BmFhKQEc/k2wAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;code.report&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2ebd9027d574408ad9eaaed0c02cd052/4d1cd/2.png&quot;
+        srcset=&quot;/static/2ebd9027d574408ad9eaaed0c02cd052/4d1cd/2.png 122w&quot;
+        sizes=&quot;(max-width: 122px) 100vw, 122px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;p&gt;You can also specify a parameter &lt;code class=&quot;language-text&quot;&gt;axis=1&lt;/code&gt; to indicate to remove columns with missing values instead of rows. On the execution bellow, the only column that did not have empty value was the column C.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;axis&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8d089c31ee7b25196addd17644c22029/0cf97/3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 71px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 178.8732394366197%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAkCAYAAACJ8xqgAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAC5klEQVRIx71Wa09TQRDl55v4qmAwKVEDgh8wRoI8pEWIaCygQkEEhGCBtvQBFu77uXuc3faWtljuNoJNJrt37u7ZM7Mz57YPN/zr+6+AnPNoAhaGYIyh7uKX73pmSBvbt3J0wVJjGG3+ND+N11MpBPgHhpxCFL/SzgruPEpKpp7nt6ejN4Z1QPe8iCePB5BeysD2+fUMoxdiDCnxnRYE9SD1WhW5owIYLWcslGzrKeFXGfLrshxXAd0Y1mo1zM7OIp1OI5VKXbW5OTmKNZlMpuXS+N8BXddFPp9HoVBojk0rFlEg3zGZeFepVOIBRdEK0CAI5XMQ+PLZ8zwaHZk7ebDjwPf9eECRfMf1UM7v4cXIS+Sr57TZhmEYcP0Ah9trmJieh0PrbMuKBxSnchZg+cM8RkeHqUS+yvLQNA1ewLD/bQl3+4fg0HLbNFUY+vDp9L3NFSQe9uP7/jEC35MMTduFo1UxOTkD3aNIVBiKmjNNC7ZtolQqw3ZcWMTEos3CTALWNB0mzR3bVgOUbAjEocRH81YTwMJvqwCKWxY3qmLX3vKtdUrnItZQmsjnWDoudKvN15Vh6yJmniJx7wFOzLoohI2K3lj9iKfPhnFqBGryJRbUSXG8GhnGwZnRAKwzze2tY+JtCh6Dmny1hrmzmSUmThvDN2NDGJ9avPwstFhXPewMpZmG1kM78qd0y1x+3dp9rMMXG7JQYVGwwkQRR/PIoo4Rc6FCyp0iWk4k3bGtZocIv0+yxqjXlTslFLJEYGelIywsLKL8W5M9axgmdYeL3c01rK5vkcS5aoBSD6mHy8VDjI89x/vPG/Krp+sG+V0c7WaRGBhERbPhkU5yFUDPD/HrxzLuJwZRrGoNgTUl09zPDSSTSeRKFyRrrvwDoADo42A7i5l3aZxUa8SsETKFuUMhf8luwbKdXuRLlyxl77ZdiikvReTZ7EW+ZIlYVrNsRE6jUblsbk2+eEd/xllsyDcF+AfGifMSWU+q/wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;code.report&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8d089c31ee7b25196addd17644c22029/0cf97/3.png&quot;
+        srcset=&quot;/static/8d089c31ee7b25196addd17644c22029/0cf97/3.png 71w&quot;
+        sizes=&quot;(max-width: 71px) 100vw, 71px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;Threshold&lt;/h3&gt;
+&lt;p&gt;You can set a threshold to limit quantity of missing values that you accept. The &lt;code class=&quot;language-text&quot;&gt;dropna&lt;/code&gt; function will take in consideration and it will remove the rows or columns if it gets to that threshold. For example, let’s say that we want to remove all rows with 2 or more missing values: &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;dropna&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;thresh&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/788b57a2f19be66b0dfe586e39a27677/15eca/4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 121px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 74.3801652892562%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAA7DAAAOwwHHb6hkAAACK0lEQVQ4y4VU227aQBDll6uqH9CnPvUHqkRVL4pCVKlIpFIvD0VtEFHSgPGVBoJqAqGYgG0w+Lo+3YttQArpSKMdH8/O7pyZ2RIekDRN/2vv+1faFyxJEriOU2AFHgXo9fqIE8K/p9YEjrss/Eq5c66ECMdRV8LzFy8RJty1wN37AZ4+eYaRvUIaeDitVjGeLzYBsUfc2RTG9Q2SONnBSbRGo3EOPxIHmH/6mM5EJiS/4XK5hOu6fM3t1XqNMAzgeV6BL7iPR+mICzwIhA9bOYeMK0VRYRgGZFmGJEnQqa3ICnRdQ7vd5spxXYemqlA1DXKGqapG1xbG4/GmKEHgQ2pewfVWnK8O3fD3fkIDKVj7PqIw4nj3dwfm4Baa3IZDb8rk1uyhb452ObTtOd4evII5tng6zXodLfUKh6+PMJvPeZokifD18ydUTr/g5P0b7htHMcwbFfULebfKK8qBbTucC6GCR9u2tzDBmUNbaRtnexeLBeU7FCmzgAH9SOKYE8s0iiKucYGFfAPTXVz4Mpxhm8ZmQelP0bspd0po3+VOKbc37cMKmUt+QJEyySagVqth7ogG/Vn7hl/NJsonFYSUJ3/l4bh8jGrlI94dHuCo/AFWVpTL8zPKYUv0IT24lI+UZVnweS+l0FUZg+EQUlvNbpqg173Gj9p3NM7qUHQDdhawY2gY3k12q/zYA/CYEPLA45AbmwdAzC3J5np7xhl3hGmG52mSrRj/ADoYeEpUPTN8AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;code.report&quot;
+        title=&quot;&quot;
+        src=&quot;/static/788b57a2f19be66b0dfe586e39a27677/15eca/4.png&quot;
+        srcset=&quot;/static/788b57a2f19be66b0dfe586e39a27677/15eca/4.png 121w&quot;
+        sizes=&quot;(max-width: 121px) 100vw, 121px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h2&gt;Filling missing values&lt;/h2&gt;
+&lt;p&gt;With the Pandas DataFrame &lt;code class=&quot;language-text&quot;&gt;fillna&lt;/code&gt; let’s you easily fill each occurrence of missing data for the value passed as parameter. Let’s fill the empty data with the string “Fill”:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;fillna&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;Fill&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/92e36a0d31137b8b8e3343c4e6789ada/332be/5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 120px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 97.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAC7ElEQVQ4y31UWU/bQBDOX+9bpb4gIVVtJaQelB4EopaX0hJIKkRbaNQgSg6wE46UOI4TJ/bGRxz768w6DnEotTSe2W93Z2e/mdkM/vFFUXTHnsfCMJxfnZrL3OfMFRbaHSPlQDmroXFxHc+PbChqA2GU3pdhgzckEgSBnDjY+YgHD5ekPR6PpX689AjLT59Lu/LrB3Jb2zNniWRwzydsC7reTWG9ro5uz5yGFKLdbt+5Wcb3fVSrVVQqFalrtZrU5+fnUFVlNmZRVFVibNfrdbJV0jV45CNxmuErap0ODMNAR9PQJtHoZE2Lsba0Nal1XY/XkM3r5J6ONqNJOuRAxdDE0eERhsKB73nw/TEs00D5+AT+OIDjOJJfpXqCk5oibc+xUS6XYQmXPd06ZEO/aWH11Uu0DRMubRYjB7apY2e3QLYHm/gMJhOUDgr4lC/CCybwHQuFvT1oXTMuncQhnyaEjS6FL4SYyWgkYFlWChuYJvp9kw4ZybFt2yRiVlbxlenHiZlQBKxvZSy5ScZcOizzWGJHi1de7IS4KsJZ/fHHBy50QGp+rrBZBSgU9mA7wWzBwNCQz+9K2xl2kF3P4cNmFtu7+3GxuwL5L58xHPmp4s4kni+aTTjuWBIcJ+oSB98PY4fCRLVSx7f9In6Wf8eYbaJY/Ap/grTDafR3+jkK45aM/vN4yPmFx0Nm2XVdSTBrrjnmi8csPGZ8MgkkZ5yEBEv2pLIcUiS2NaQWq6I/sOARN8dUsFVqOVVtQtBma9BHqVTC2dk5Lq6uiRoX9nBAa+qwqHSiVNlwAno63r5Zo8K24I/62MjmsL62iuUnK/BoQael4P27TbxYeYbX2S2E0+7KbayjNX3i+MbTpJDDvoHT0wpsaj1hD6lHe7hpXUFpNDGiCIcDk7A+LpsNXF7/kRFahKmKgoG1EKHsS8+XoOsyN9zLHvEVSN64FT0vxoKAuR3HHBLGXHveAoeJMf+szz+YyX3uxRYy/xdAd/krw/nAzwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;code.report&quot;
+        title=&quot;&quot;
+        src=&quot;/static/92e36a0d31137b8b8e3343c4e6789ada/332be/5.png&quot;
+        srcset=&quot;/static/92e36a0d31137b8b8e3343c4e6789ada/332be/5.png 120w&quot;
+        sizes=&quot;(max-width: 120px) 100vw, 120px&quot;
+      /&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    &lt;/p&gt;
+&lt;h3&gt;Filling data with mean values&lt;/h3&gt;
+&lt;p&gt;Sometimes, it is better to fill a missing data with some other value that makes more sense for your analysis. On the example below, we will get the DataFrame df, find the column ‘A’, fill the empty values with the mean of the values of the same column ‘A’. Let’s see how that looks with only one command:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;fillna&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;value&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;df&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;mean&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;
+  &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/527b03e191afd74554cb69d7e9a2ed0f/6a467/6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+  
+  &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block;  max-width: 210px; margin-left: auto; margin-right: auto;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 36.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA+0lEQVQoz5WRbWuDMBSF/f+/bLRMZkdHq+DLVjQaoyZqFjXxLKQo3bf2QriXQ+7DOYknB4GS1thq6Htw3oGUBMtinLauK54t73fsUT0ABeegtEJBCmi9vg6clELXtrvQsBqkIiAWOC/6daAcRxuv/OeQMYaiyKHNamHGAY2598ezaVt3wHHoQWu2A3sLbBpmHRKY543tSbyWUhz9I959H0FwgponRFGIjgvIUeDtcEAcx/gIAiRZhnlWONk5CiNcrxd8ns9ulwtxd6ikxC2/IUlSfGc/WPRiP4WCNY1dnkBs9DRN8XUJ3VNordF1rbtT2BRlVSHPcyg1OeAfk4Mc7U7YQZAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    &gt;
+      &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px transparent;&quot;
+        alt=&quot;code.report&quot;
+        title=&quot;&quot;
+        src=&quot;/static/527b03e191afd74554cb69d7e9a2ed0f/6a467/6.png&quot;
+        srcset=&quot;/static/527b03e191afd74554cb69d7e9a2ed0f/9ec3c/6.png 200w,
+/static/527b03e191afd74554cb69d7e9a2ed0f/6a467/6.png 210w&quot;
+        sizes=&quot;(max-width: 210px) 100vw, 210px&quot;
       /&gt;
     &lt;/span&gt;
   &lt;/span&gt;
@@ -251,23 +470,7 @@ Write on the file the print call with “Hello World” text:&lt;/p&gt;
 &lt;h3&gt;Need help installing Python?&lt;/h3&gt;
 &lt;p&gt;If you need help installing Python, check out our previous post:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://code.report/installing-python-linux/&quot;&gt;Installing Python on Linux&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://code.report/installing-python-windows/&quot;&gt;Installing Python on Windows&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Using convert to resize and rotate images]]></title><description><![CDATA[The convert command can quickly resize an image directly on a linux terminal. The following command will resize an image based on a percent…]]></description><link>https://code.report/resize-images-linux/</link><guid isPermaLink="false">https://code.report/resize-images-linux/</guid><pubDate>Sat, 28 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;The convert command can quickly resize an image directly on a linux terminal.&lt;/h3&gt;
-&lt;p&gt;The following command will resize an image based on a percent of 50%:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;resize &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To resize an image forcing a width and height:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;resize &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;x100 example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To resize an image keeping the aspect ratio and a width of 200:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;resize &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To resize an image keeping the aspect ratio an a height of 200:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;resize x200 example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;To rotate an image, just specify the angle needed:&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;rotate &lt;span class=&quot;token number&quot;&gt;90&lt;/span&gt; example&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;rotated&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;You can convert all the files on the folder&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;resize &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Or you can convert all the images on the folder onto a single pdf file&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg all&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;images&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pdf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Remember that some linux distributions might not have the convert by default, you can install it with&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;sudo apt&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt; install imagemagick&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Windows Powershell]]></title><description><![CDATA[PowerShell is a task automation and configuration management framework from Microsoft It consisting of a command-line shell and associated…]]></description><link>https://code.report/windows-powershell-power/</link><guid isPermaLink="false">https://code.report/windows-powershell-power/</guid><pubDate>Sat, 28 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;PowerShell is a task automation and configuration management framework from Microsoft&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://code.report/installing-python-windows/&quot;&gt;Installing Python on Windows&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Windows Powershell]]></title><description><![CDATA[PowerShell is a task automation and configuration management framework from Microsoft It consisting of a command-line shell and associated…]]></description><link>https://code.report/windows-powershell-power/</link><guid isPermaLink="false">https://code.report/windows-powershell-power/</guid><pubDate>Sat, 28 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;PowerShell is a task automation and configuration management framework from Microsoft&lt;/h3&gt;
 &lt;p&gt;It consisting of a command-line shell and associated scripting language. Initially a Windows component only, known as Windows PowerShell, it was made open-source and cross-platform on August 2016 with the introduction of PowerShell Core. This shell is based on the .NET framework, and it includes a command-line shell and a scripting language.&lt;/p&gt;
 &lt;p&gt;Powershell contains hundreds of commands, which are called Cmdlets. We can easely list them all with&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Get&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Command &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Type Cmdlet&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -287,7 +490,23 @@ Set&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Content &lt;span c
 &lt;p&gt;If you want to try the command but without it actually executing, try with the -WhatIf parameter! It will show what would be executed without actually doing it!&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Stop&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;Computer &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;WhatIf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The command let’s you power off multiple systems as well, just name them on the command. If you are going to try this at your works network, please use it with the -WhatIf parameter!&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Stop&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;computer &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;ComputerName ‘computer01′&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;’computer02′&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;’computer03’&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using SED - A Stream EDitor for unix systems]]></title><description><![CDATA[In this article, I will show a fast and simple way to improve your productivity using a tool that helps with text processing, which can be…]]></description><link>https://code.report/using-sed-linux/</link><guid isPermaLink="false">https://code.report/using-sed-linux/</guid><pubDate>Fri, 27 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In this article, I will show a fast and simple way to improve your productivity using a tool that helps with text processing, which can be very useful when you need to manipulate part of the document, to find something or when substitution of words or patterns is needed.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;Stop&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;computer &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;ComputerName ‘computer01′&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;’computer02′&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;’computer03’&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using convert to resize and rotate images]]></title><description><![CDATA[The convert command can quickly resize an image directly on a linux terminal. The following command will resize an image based on a percent…]]></description><link>https://code.report/resize-images-linux/</link><guid isPermaLink="false">https://code.report/resize-images-linux/</guid><pubDate>Sat, 28 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;The convert command can quickly resize an image directly on a linux terminal.&lt;/h3&gt;
+&lt;p&gt;The following command will resize an image based on a percent of 50%:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;resize &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To resize an image forcing a width and height:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;resize &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt;x100 example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To resize an image keeping the aspect ratio and a width of 200:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;resize &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt; example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To resize an image keeping the aspect ratio an a height of 200:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;resize x200 example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To rotate an image, just specify the angle needed:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert example&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;rotate &lt;span class=&quot;token number&quot;&gt;90&lt;/span&gt; example&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;rotated&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can convert all the files on the folder&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;resize &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Or you can convert all the images on the folder onto a single pdf file&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;convert &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;jpg all&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;images&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pdf&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Remember that some linux distributions might not have the convert by default, you can install it with&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;sudo apt&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;get&lt;/span&gt; install imagemagick&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Using SED - A Stream EDitor for unix systems]]></title><description><![CDATA[In this article, I will show a fast and simple way to improve your productivity using a tool that helps with text processing, which can be…]]></description><link>https://code.report/using-sed-linux/</link><guid isPermaLink="false">https://code.report/using-sed-linux/</guid><pubDate>Fri, 27 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;In this article, I will show a fast and simple way to improve your productivity using a tool that helps with text processing, which can be very useful when you need to manipulate part of the document, to find something or when substitution of words or patterns is needed.&lt;/p&gt;
 &lt;p&gt;sed &lt;code class=&quot;language-text&quot;&gt;(stream editor)&lt;/code&gt; is a Unix utility that parses and transforms text, using a simple, compact programming language and is available today for most operating systems. sed was one of the earliest tools to support regular expressions, and remains in use for text processing, most notably with the substitution command. Popular alternative tools for plaintext string manipulation and “stream editing” include AWK and Perl.&lt;/p&gt;
 &lt;h3&gt;Using sed for substitution or replacing words.&lt;/h3&gt;
 &lt;p&gt;You can replace some words on a text file, or on a stream by simple using the code bellow on a terminal window:&lt;/p&gt;
